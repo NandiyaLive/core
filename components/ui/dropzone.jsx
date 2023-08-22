@@ -56,10 +56,7 @@ export const Dropzone = (props) => {
 
   return (
     <section>
-      <div
-        {...getRootProps({ className: "dropzone" })}
-        class="flex items-center justify-center w-full"
-      >
+      <div {...getRootProps({ className: "dropzone" })} class="flex items-center justify-center w-full">
         <label
           for="dropzone"
           class="flex flex-col items-center justify-center w-full h-56 border-2 border-neutral-300 border-dashed rounded-lg cursor-pointer bg-neutral-50 dark:hover:bg-bray-800 dark:bg-neutral-700 hover:bg-neutral-100 dark:border-neutral-600 dark:hover:border-neutral-500 dark:hover:bg-neutral-600"
@@ -67,7 +64,7 @@ export const Dropzone = (props) => {
           <div class="flex flex-col items-center justify-center pt-5 pb-6">
             <UploadCloud className="h-8" />
             <p class="mb-2 text-sm text-neutral-500 dark:text-neutral-400">
-              Drag 'n' drop some files here, or click to select files
+              Drag &apos;n&apos; drop some files here, or click to select files
             </p>
             <p class="text-xs text-neutral-500 dark:text-neutral-400">
               Images Only {props.maxFiles && `, ${props.maxFiles} file(s)`}
@@ -81,8 +78,8 @@ export const Dropzone = (props) => {
       {acceptedFiles.length ? (
         <div className="flex mt-2 justify-between">
           <div className="flex gap-2">
-            {acceptedFiles.map((file) => (
-              <div className="h-40 w-40 relative">
+            {acceptedFiles.map((file, index) => (
+              <div className="h-40 w-40 relative" key={index}>
                 <Image
                   key={file.path}
                   alt={file.path}
