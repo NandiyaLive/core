@@ -172,7 +172,7 @@ const VariantForm = ({ initialData }) => {
             </div> */}
 
             {Array.from(Array(optionsCount)).map((_, i) => (
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 gap-8" key={i}>
                 <FormField
                   control={form.control}
                   name="value"

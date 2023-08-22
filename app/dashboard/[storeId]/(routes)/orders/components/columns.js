@@ -1,5 +1,7 @@
 "use client";
 
+import { X, Check } from "lucide-react";
+
 export const columns = [
   {
     accessorKey: "products",
